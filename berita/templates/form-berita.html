@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<form action = "" method = "post">
+    {% comment %} {{ form}} {% endcomment %}
+	{% csrf_token %}
+    <table>
+        <tr>
+            <td>Judul</td>
+            <td>{{ form.judul}}</td>
+        </tr>
+        <tr>
+            <td>Konten</td>
+            <td>{{ form.konten}}</td>
+        </tr>
+    </table>
+	<input type="submit" value="Submit"> 
+</form>
+{% endblock content %}
